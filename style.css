@@ -1,0 +1,80 @@
+/* ================================
+*  Reset Settings
+================================*/
+
+* {
+  margin:     0;
+  padding:    0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width:       100%;
+  height:      100%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size:   100%;
+  color:       #464A4F;
+  background-color: #f2f2f2;
+}
+
+/* ================================
+*  Header Settings
+================================*/
+
+.app-header {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  width:           100%;
+  height:          60px;
+  color:           #eeeeee;
+  background:      #464A4F;
+}
+
+.app-header > h1 { font-size: 2rem; }
+
+/* ================================
+*  Main Container Settings
+================================*/
+
+.app-main {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 200px);
+  padding: 1% 1%;
+  overflow: hidden;
+}
+
+.app-main--posts {
+  float:         left;
+  width:         60%;
+  height:        90%;
+  margin-right:  5%;
+  background:    white;
+  border:        2px solid #dce0e3;
+  border-radius: 6px;
+  box-shadow:    0 3px 12px rgba(0,0,0,0.1);
+  overflow:      auto;
+}
+
+.app-main--sideContainer {
+  float: right;
+  width: 35%;
+  height: 90%;
+  background: red;
+  overflow: hidden;
+}
+
+/* ================================
+*  Footer Settings
+================================*/
+
+.app-footer {
+  display: flex;
+  width: 100%;
+  height: 120px;
+  background: #eeeeee;
+  border-top: 2px solid #dce0e3;
+}
