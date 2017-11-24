@@ -39,12 +39,12 @@ body {
 ================================*/
 
 .app-main {
-  display: flex;
+  display:     flex;
   align-items: center;
-  width: 100%;
-  height: calc(100% - 200px);
-  padding: 1% 1%;
-  overflow: hidden;
+  width:       100%;
+  height:      calc(100% - 200px);
+  padding:     1% 1%;
+  overflow:    hidden;
 }
 
 .app-main--posts {
@@ -52,19 +52,17 @@ body {
   width:         60%;
   height:        90%;
   margin-right:  5%;
-  background:    white;
-  border:        2px solid #dce0e3;
-  border-radius: 6px;
-  box-shadow:    0 3px 12px rgba(0,0,0,0.1);
   overflow:      auto;
 }
 
 .app-main--sideContainer {
-  float: right;
-  width: 35%;
-  height: 90%;
-  background: red;
-  overflow: hidden;
+  float:           right;
+  display:         flex;
+  flex-direction:  column;
+  justify-content: space-between;
+  width:           35%;
+  height:          90%;
+  overflow:        hidden;
 }
 
 /* ================================
@@ -72,9 +70,86 @@ body {
 ================================*/
 
 .app-footer {
-  display: flex;
-  width: 100%;
-  height: 120px;
+  display:    flex;
+  width:      100%;
+  height:     120px;
   background: #eeeeee;
   border-top: 2px solid #dce0e3;
+}
+
+/* ================================
+*  Card Component
+================================*/
+
+.card {
+  background:    white;
+  border:        2px solid #dce0e3;
+  border-radius: 6px;
+  box-shadow:    0 3px 12px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  padding:     1rem;
+  font-family: Tahoma, sans-serif;
+  font-size:   1.1rem;
+}
+
+/* ================================
+*  Post List Component
+================================*/
+.post-list {
+  width:      90%;
+  margin:     0 5%;
+  list-style: none;
+}
+
+.post-list--item {
+  display:       inline-block;
+  padding:       1rem 0;
+  border-bottom: 1px dashed #dedede;
+}
+
+.post-list--item:last-child { border-bottom: none; }
+
+.post-list--item h4 {
+  margin:         0 0 10px 0;
+  font:           300 1.3rem "Helvetica";
+  color:          #f1a803;
+  text-transform: capitalize;
+}
+
+.post-list--item p {
+  line-height: 1.5;
+  font-size:   .9rem;
+  text-align:  justify;
+}
+
+.post-list--item span {
+  float:          right;
+  margin:         1rem 0;
+  color:          #bbbbbb;
+  font-size:      .75rem;
+  text-transform: uppercase;
+}
+
+/* ================================
+*  Author List Component
+================================*/
+.author-list {
+  align-self: flex-start;
+  width:      100%;
+  height:     45%;
+}
+
+.author-list--content {
+  width: 100%;
+}
+
+/* ================================
+*  Images List Component
+================================*/
+.image-list {
+  align-self: flex-end;
+  width:      100%;
+  height:     45%;
 }
