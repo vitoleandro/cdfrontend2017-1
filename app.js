@@ -21,18 +21,12 @@ function getPosts(URI) {
       items.push(postDom(key,val));
       
     });
-
-    // for(let i in items) {
-    //   // document.querySelector(".post-list").appendChild(items[i]);
-    //   // console.log(items[i]);
-    // }
     
     $( "<ul/>", {
       "class": "post-list",
       html: items.join( "" )
     }).appendTo( ".app-main--posts" );
     
-    console.log('ok');
   });
 }
 
@@ -75,6 +69,14 @@ function getAuthors(URI) {
 }
 
 function authorDom(item) {
-  let author = '<div>'+ item.username +'</div>';
+  let author = 
+  '<li class="author-list--item">'+ 
+    '<div class="author-list--item_avatar"></div>'+
+    '<div class="author-list--item_data">'+
+      '<span>' +item.username + '</span>'+ '<br>'+
+      '<span>' +item.email + '</span>'+
+    '<div>'+
+  '</li>';
+
   return author;
 }
